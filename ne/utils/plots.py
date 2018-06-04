@@ -237,7 +237,7 @@ def plot_regret_trace(data_in, is_file=True):
         len_shrtst_trace = min([len(trace) for trace in traces])
         max_xlim = min(max_xlim, len_shrtst_trace)
         rs = np.array([trace[:len_shrtst_trace] for trace in traces])
-        rs[rs <= 0] = 1e-300  # np.finfo(np.float32).eps
+        rs[rs <= 0] = 1e-20  # np.finfo(np.float32).eps
         mean_rs = np.mean(rs, 0)
         std_rs = np.std(rs, 0)
         color = colors_dict[alg]  # COLORS.next()

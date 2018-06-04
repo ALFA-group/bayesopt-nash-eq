@@ -42,3 +42,24 @@ As the experiment is running, results of different runs/algorithms/problems will
 ## Plotting Results
 
 The `demo.ipynb` demonstrates how the results can be plotted. Moreover, a `json` file whose format is similar to that created by `toy_experiments.py` can be passed to the `plot_regret_trace` function under `ne/utils/plots.py` as demonstrated in the `main` block of `ne/utils/plots.py`.
+
+## Running GPGame from Python
+
+There might be some difficulty in installing the packages
+
+```
+sudo R
+>> install.packages("GPGame")
+>>
+sudo cp -a ~/R/x86_64-pc-linux-gnu-library/3.2/. ~/anaconda2/envs/ne/lib/R/library/
+```
+
+## Running Multithreaded experiments
+
+There is unintended multithreading with numpy ( https://stackoverflow.com/questions/19257070/unintented-multithreading-in-python-scikit-learn )
+
+Check the blas/lapack library used and set the number of threads. E.g.
+
+```
+export OPENBLAS_NUM_THREADS=1
+```
