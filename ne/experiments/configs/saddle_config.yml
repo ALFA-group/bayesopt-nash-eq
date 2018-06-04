@@ -1,0 +1,28 @@
+name: saddle
+dimensions: [2]
+num_runs: 2
+runs_offset: 0
+algs: [BN, GPG, BR]
+fevals_per_dim: [10]
+result_path: res/saddle_res.json
+
+
+BN:
+  - name: BN-exact
+    kwargs:
+      is_approx: False
+  - name: BN-approx
+    kwargs:
+      is_approx: True
+
+GPG:
+  - name: GPG-psim
+    kwargs:
+      crit: psim
+  - name: GPG-sur
+    kwargs:
+      crit: sur
+
+BR:
+  - name: "BR"
+    kwargs: {}

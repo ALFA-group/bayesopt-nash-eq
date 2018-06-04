@@ -1,0 +1,16 @@
+name: ne
+dependencies:
+- python=2.7
+- numpy
+- scipy
+- pandas
+- matplotlib
+- rpy2
+- seaborn
+- bokeh
+- yaml
+- nb_conda
+- pip:
+  - sklearn
+  - cma
+  - pydoe
