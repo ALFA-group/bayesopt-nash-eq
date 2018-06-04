@@ -4,7 +4,9 @@ dependencies:
 - numpy
 - scipy
 - pandas
+- cython
 - matplotlib
+- r-base
 - rpy2
 - seaborn
 - bokeh
