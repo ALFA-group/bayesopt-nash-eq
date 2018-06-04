@@ -3,7 +3,7 @@ from ne.minimizers.cmaes import CMAES
 
 
 class Saddle(object):
-    def __init__(self, is_log=True, is_minimize=True, is_noise=False, dim=2, x_opt=0.5):
+    def __init__(self, is_log=True, is_minimize=True, is_noise=False, dim=2, x_opt=0.3):
         self._num_evals = 0
         self._xs = []
         self._fs = []

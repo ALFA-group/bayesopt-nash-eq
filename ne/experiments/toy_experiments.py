@@ -13,8 +13,6 @@ from ne.nash_eq_algs.gpgame import GPGame
 
 from ne.benchmark.saddle import Saddle
 from ne.benchmark.mop1 import MOP1
-from ne.benchmark.adnet_game import AdnetGame
-import c_implementation.adnet as adnet
 
 
 def run_saddle_unit_exp(setup):

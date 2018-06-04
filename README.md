@@ -8,7 +8,6 @@ Games: A Bayesian Optimization Approach](https://arxiv.org/pdf/1804.10586.pdf)
 
 ```
 conda install nb_conda
-conda config --add channels conda-forge
 conda env create --file environment.yml
 ```
 
@@ -41,16 +40,24 @@ As the experiment is running, results of different runs/algorithms/problems will
 
 ## Plotting Results
 
-The `demo.ipynb` demonstrates how the results can be plotted. Moreover, a `json` file whose format is similar to that created by `toy_experiments.py` can be passed to the `plot_regret_trace` function under `ne/utils/plots.py` as demonstrated in the `main` block of `ne/utils/plots.py`.
+The `demo.ipynb` demonstrates how the results can be plotted. Moreover, a `json` file whose format is similar to that created by `toy_experiments.py` can be passed to the `plot_regret_trace` function under `ne/utils/plots.py` as demonstrated in the `main` block of `ne/utils/plots.py`. The results of the `saddle_config.yml` experiment is stored
+in `ne/experiments/res/saddle_res.json` 
+
+For the experiment defined above, the `plots.py` script is set to display its result:
+
+```
+python ne/utils/plots.py
+```
+
 
 ## Running GPGame from Python
 
-There might be some difficulty in installing the packages
+There might be some difficulty in installing the "GPGame" package and interfacing it with Python. Make sure you install the package (and all the required packages) with `sudo`. Then copy it to the environment's `R/library` 
 
 ```
 sudo R
 >> install.packages("GPGame")
->>
+>> quit()
 sudo cp -a ~/R/x86_64-pc-linux-gnu-library/3.2/. ~/anaconda2/envs/ne/lib/R/library/
 ```
 
