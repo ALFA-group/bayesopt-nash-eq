@@ -78,3 +78,16 @@ Check the blas/lapack library used and set the number of threads. E.g.
 ```
 export OPENBLAS_NUM_THREADS=1
 ```
+
+### Citation
+
+If you make use of this code and you'd like to cite us, please consider the following:
+
+```
+@article{al2018approximating,
+  title={Approximating Nash Equilibria for Black-Box Games: A Bayesian Optimization Approach},
+  author={Al-Dujaili, Abdullah and Hemberg, Erik and O'Reilly, Una-May},
+  journal={arXiv preprint arXiv:1804.10586},
+  year={2018}
+}
+```
